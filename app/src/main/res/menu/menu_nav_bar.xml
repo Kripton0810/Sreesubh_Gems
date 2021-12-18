@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single" >
+    <item android:id="@+id/nav_home" android:icon="@drawable/ic_baseline_home_24" android:title="Home"/>
+    <item android:id="@+id/attandance" android:icon="@drawable/ic_baseline_calendar_today_24" android:title="Attandance Report"/>
+    <item android:id="@+id/holiday_nav" android:icon="@drawable/ic_baseline_calendar_today_24" android:title="Holiday"/>
+    <item android:id="@+id/profile" android:icon="@drawable/ic_baseline_person_24" android:title="My Profile"/>
+    <item android:id="@+id/ask_for_leave" android:icon="@drawable/leave" android:title="Ask For Leave"/>
+    <item android:id="@+id/half_day" android:icon="@drawable/half_day_leave" android:title="Half Day Leave"/>
+    <item android:id="@+id/exit" android:icon="@drawable/ic_baseline_exit_to_app_24" android:title="Exit"/>
+    <item android:id="@+id/logout" android:icon="@drawable/ic_baseline_exit_to_app_24" android:title="Logout"/>
+</group>
+</menu>

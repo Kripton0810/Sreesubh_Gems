@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:elevation="3dp"
+    android:background="#fff"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/post_pro_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/trialpic"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/post_cont_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_cont_body"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/post_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Subhankar Dutta"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/post_pro_img"
+        app:layout_constraintTop_toTopOf="@+id/post_pro_img" />
+
+    <TextView
+        android:id="@+id/post_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="08-10-2001 12:01"
+        android:textColor="#595959"
+        app:layout_constraintStart_toStartOf="@+id/post_profile_name"
+        app:layout_constraintTop_toBottomOf="@+id/post_profile_name" />
+
+    <TextView
+        android:id="@+id/post_cont_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000"
+        android:paddingRight="10dp"
+        android:text="As this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though)."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_pro_img" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_cont_image">
+
+
+        <TextView
+            android:id="@+id/post_like"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:gravity="center"
+            android:drawableBottom="@drawable/ic_baseline_thumb_up_24"
+            android:drawableTint="#A5A5A5"
+            />
+
+        <ImageView
+            android:id="@+id/post_comment"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_baseline_comment_24"
+            app:tint="@color/gold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/post_comment_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#ECECEC"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <EditText
+            android:id="@+id/edit_text_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_border"
+            android:ems="10"
+            android:hint="Type something..."
+            android:inputType="textPersonName" />
+
+        <ImageView
+            android:id="@+id/comment_post_send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/ic_baseline_send_24"
+            app:tint="#02A1F6" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
